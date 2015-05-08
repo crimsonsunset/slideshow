@@ -1,0 +1,284 @@
+/*Overall style for page*/
+.body{
+    font-family: Arial;
+    font-size: 17px;
+}
+
+/*container that will hold the entire slider*/
+.container {
+    max-width: 980px;
+    height: 290px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid;
+}
+
+/*container that will hold the content*/
+#slideInnerContainer {
+    width: 87%;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+
+/*pagination container to hold page dots and associated classes/ids*/
+#paginationContainer {
+    width: 100%;
+    /*border: 1px solid;*/
+    position: absolute;
+    height: 40px;
+    bottom: 0;
+}
+#paginationInnerContainer {
+    width: 90%;
+    text-align: center;
+    margin: 0px auto;
+    height: 40px;
+    bottom: 0;
+}
+
+/*main pagination*/
+#pager {
+    /*width: 80%; /!* change as required *!/*/
+    height: 100%; /* change as required */
+    padding: 0;
+    z-index: 999;
+    display: inline-block;
+    /*border: 2px solid;*/
+}
+#pager a {
+    display: block;
+    margin: 0px auto;
+    float: left;
+    width: 30px;
+    height: 30px;
+    text-indent: -999em;
+    background: #fff;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    box-shadow: 0 0 1px 1px #707173;
+    margin-right: 10px;
+}
+#pager a {
+    margin-top: 4px;
+    background: #c0c0c0;
+}
+#pager a.active {
+    background: #262729;
+}
+
+/*mobile pagination*/
+.mobilePager{
+    font-size: 17px;
+    height: 40px;
+    width: 174px;
+    margin: 0 auto;
+
+}
+.mobilePagerBtnCont{
+    display: -webkit-box;
+    font-size: 17px;
+    height: 30px;
+    width: 146px;
+    margin: 0 auto;
+    margin-top: 4px;
+}
+.mobilePageBtn{
+    font-size: 25px;
+    height: 30px;
+    width: 30px;
+}
+.mobilePageNum{
+    font-family: Arial;
+    font-size: 17px;
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 30px;
+    width: 82px;
+    margin-top: 6px;
+    text-align: center;
+}
+
+
+/*content tile classes*/
+.contentBox{
+    background: lightgray;
+    width: 174px;
+    height: 186px;
+    display: inline-block;
+    margin-left: 3%;
+    margin-right: 1%;
+    margin-top: 3%;
+}
+.innerContentBox{
+    margin-top: 1%;
+    width: 174px;
+    height: 60px;
+    display: table;
+    text-align: center;
+}
+.currImg{
+    margin:6%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 152px;
+    height: 92px;
+}
+.title{
+    text-transform: capitalize;
+    margin-bottom: 3px;
+    font-family: Arial;
+    font-size: 17px;
+    height: 20px;
+    width: 174px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.actionBtn {
+    margin-top: 2%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    border: none;
+    background: #e62e2e;
+    text-align: center;
+    margin: 0 auto;
+    width: 120px;
+    height: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+.actionBtn:hover {
+    background: #f56c6c;
+    background-image: -webkit-linear-gradient(top, #f56c6c, #961919);
+    background-image: -moz-linear-gradient(top, #f56c6c, #961919);
+    background-image: -ms-linear-gradient(top, #f56c6c, #961919);
+    background-image: -o-linear-gradient(top, #f56c6c, #961919);
+    background-image: linear-gradient(to bottom, #f56c6c, #961919);
+    text-decoration: none;
+}
+
+/*overall component definitions*/
+.slide{
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+    position: relative;
+
+}
+#prevSlideBtn, #nextSlideBtn {
+    width: 8%;
+    height: 290px;
+    z-index: 1;
+    cursor: pointer;
+    white-space: nowrap;
+
+    position: absolute;
+    text-align: center;
+    background-color: #D46A6A;
+}
+#prevSlideBtn{
+    /*background-image: url("../../img/arrow-alt-left.png");*/
+    float: left;
+    border-right: 1px solid;
+    position: absolute;
+}
+#nextSlideBtn{
+    /*background-image: url("../../img/arrow-alt-right.png");*/
+    float: right;
+    border-left: 1px solid;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+.imgHolder {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+img {
+    vertical-align: middle;
+}
+footer{
+    margin: 0 auto;
+    margin-top: 10px;
+    display: table;
+}
+
+
+/*tablet layout*/
+@media (max-width: 976px) {
+    .container {
+        max-width: 580px;
+        height: 474px;
+        /*background: #eef;*/
+        margin: 0px auto;
+        position: relative;
+        /*border: 1px solid;*/
+    }
+    #prevSlideBtn, #nextSlideBtn {
+        height: 474px;
+        width: 12%;
+    }
+    #slideInnerContainer {
+        width: 87%;
+        margin: 0px auto;
+        position: relative;
+        height: 474px;
+        margin-top: 10px;
+        margin-left: 8%;
+    }
+    .slide{
+        width: 80%;
+        /*border: 1px solid;*/
+        margin: 0 auto;
+    }
+}
+
+
+/*mobile layout*/
+@media (max-width: 562px) {
+    .container {
+        width: 100%;
+        min-width: 250px;
+        height: 290px;
+        /*background: #eef;*/
+        margin: 0px auto;
+        position: relative;
+        /*border: 1px solid;*/
+    }
+    #prevSlideBtn, #nextSlideBtn {
+        height: 290px;
+    }
+    #slideInnerContainer {
+        width: 80%;
+        margin: 0px auto;
+        position: relative;
+        height: 290px;
+    }
+    .slide{
+        width: 176px;
+        top: 6%;
+        height: 207px;
+        overflow: hidden;
+        /*border: 1px solid;*/
+        margin: 0 auto;
+    }
+    .contentBox{
+        height: 190px;
+        margin-top:4%;
+    }
+    #prevSlideBtn, #nextSlideBtn {
+        width: 21%
+    }
+}

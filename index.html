@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>Slideshow Widget</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!--load up styles-->
+    <link rel="stylesheet" href="app/styles/main.css">
+</head>
+<body>
+
+
+<div class="container">
+    <div id="prevSlideBtn">
+        <span class="imgHolder"></span><img src="img/arrow-alt-left.png"/>
+    </div>
+    <div id="slideInnerContainer">
+    </div>
+    <div id="nextSlideBtn">
+        <span class="imgHolder"></span><img src="img/arrow-alt-right.png"/>
+    </div>
+    <div id="paginationContainer">
+        <div id="paginationInnerContainer">
+        </div>
+    </div>
+</div>
+<footer>By: Joe Sangiorgio</footer>
+
+<!--include libraries-->
+<script src="lib/jquery.js"></script>
+
+<!--load up config data and templates-->
+<script src="config.js"></script>
+<script src='app/js/templates/Slide.js'></script>
+<script src='app/js/templates/Pagination.js'></script>
+<script src='app/js/slideshow.js'></script>
+<script src='app/js/util.js'></script>
+
+<!--load up main-->
+<script src="app/js/main.js"></script>
+
+</body>
+</html>
